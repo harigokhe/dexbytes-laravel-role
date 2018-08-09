@@ -1,5 +1,5 @@
 {
-    "name": "dexbytes/laravelrole",
+    "name": "dexbytes_user_role",
     "description": "user role management",
     "type": "library",
     "license": "Mit",
