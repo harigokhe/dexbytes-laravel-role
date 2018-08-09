@@ -1,0 +1,22 @@
+{
+    "name": "dexbytes/laravelrole",
+    "description": "user role management",
+    "type": "library",
+    "license": "Mit",
+    "authors": [
+        {
+            "name": "hari Gokhe",
+            "email": "hari.dexbyte@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        
+    },
+    "repositories": [
+       {
+         "url": "",
+          "type": ""
+        }
+    ]
+}
