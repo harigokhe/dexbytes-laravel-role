@@ -10,8 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
+     "prefer-stable": true,
     "require": {
-           "vendor/my-private-repo": "dev" 
+           "vendor/my-private-repo": "dev"
     },
     "repositories": [
        {
