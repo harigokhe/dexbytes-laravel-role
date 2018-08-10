@@ -1,6 +1,5 @@
 package folder structure
 
-
 	│ composer.json
 	|
 	│ readme.md
@@ -53,51 +52,43 @@ package folder structure
 		  PermissionHasRelations.php
 	      RoleHasRelations.php
 		  Slugable.php
-1)include packages folder in root directory
+		  
+ Package setup steps
+ 
+1)add "harigokhe/dexbytes-laravel-role": "dev-master", in  composer file
 
-2)go to in project folder from terminal,migrate packages table using this command
+2) composer update
 
-  -> php artisan migrate --path vendor/laravelrole/migrations
-  
-6)copy role.php from vendor/laravelrole/config and paste it in root config folder 
+3)add service provider in config/app.php in provider array 
 
-7)open database/Seeds/DatabaseSeeder.php file 
+ harigokhe\LaravelRoles\LaravelRoleServiceProvider::class
+ 
+4)publish your package file 
 
-add this line before class 			-> use harigokhe\laravelrole\seeds\PackageSeeder;
+php artisan vendor:publish --provider="harigokhe\LaravelRoles\LaravelRoleServiceProvider"
 
-add this line inside run method 	->$this->call(\PackageSeeder::class);
+5) php artisan migrate
 
-8)open project composer file 
+5)add class in user model
 
-set path for  seed  record in autoload key on classmap array 
+before class-  use harigokhe\LaravelRoles\Traits\HasRoleAndPermission;
 
-"autoload": {
+after class-	use HasRoleAndPermission;
 
-        "classmap": [
-	
-            "database",
-	    
-           "database/factories",
-	   
-           "harigokhe/LaravelRoles/seeds" 
-	   
-             ],
-        "psr-4": {
-	
-            "App\\": "app/",
-	    
-            "Tests\\": "tests/"
-	    
-        }
-	
-    },
-    
-    
-9) run command for reload composer -> composer dumpautoload
 
-10) seed dummy records for running user role management package
+6) open file database/seeds/DatabaseSeeder.php 
 
-	run command -> php artisan db:seed
+add line inside run method
+
+	$this->call(PermissionsTableSeeder::class);
+	$this->call(RolesTableSeeder::class);
+	$this->call(UsersTableSeeder::class);
+	$this->call(ConnectRelationshipsSeeder::class);
+
+7)Run command for admin/user role
+
+php artisan db:seed
+
 	
 	
 /* Seed an initial set of Permissions, Roles, and Users with roles. */
