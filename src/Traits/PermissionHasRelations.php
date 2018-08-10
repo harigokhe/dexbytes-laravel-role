@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelRole\Traits;
+namespace harigokhe\LaravelRoles\Traits;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
