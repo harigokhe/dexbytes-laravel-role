@@ -1,10 +1,12 @@
-/*  Package Folder structure */
- └───dexbytes
-  └───LaravelRole
+package folder structure
+
+
 	│ composer.json
+	|
 	│ readme.md
 	│
 	├─config
+	|
 	│ roles.php
 	│
 	├─migrations
@@ -51,30 +53,53 @@
 		  PermissionHasRelations.php
 	      RoleHasRelations.php
 		  Slugable.php
-/* package setup steps */
 1)include packages folder in root directory
+
 2)go to in project folder from terminal,migrate packages table using this command
+
   -> php artisan migrate --path vendor/laravelrole/migrations
+  
 6)copy role.php from vendor/laravelrole/config and paste it in root config folder 
+
 7)open database/Seeds/DatabaseSeeder.php file 
+
 add this line before class 			-> use harigokhe\laravelrole\seeds\PackageSeeder;
+
 add this line inside run method 	->$this->call(\PackageSeeder::class);
+
 8)open project composer file 
+
 set path for  seed  record in autoload key on classmap array 
+
 "autoload": {
+
         "classmap": [
+	
             "database",
+	    
            "database/factories",
+	   
            "harigokhe/LaravelRoles/seeds" 
+	   
              ],
         "psr-4": {
+	
             "App\\": "app/",
+	    
             "Tests\\": "tests/"
+	    
         }
+	
     },
+    
+    
 9) run command for reload composer -> composer dumpautoload
+
 10) seed dummy records for running user role management package
+
 	run command -> php artisan db:seed
+	
+	
 /* Seed an initial set of Permissions, Roles, and Users with roles. */
  #### Roles Seeded
 |Property|Value|
