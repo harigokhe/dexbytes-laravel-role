@@ -1,0 +1,32 @@
+{
+    "name": "harigokhe/dexbytes-laravel-role",
+    "description": "user role management",
+    "type": "library",
+    "license": "Mit",
+    "authors": [
+        {
+            "name": "hari Gokhe",
+            "email": "hari.dexbyte@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "harigokhe\\LaravelRoles\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "harigokhe\\LaravelRoles\\LaravelRoleServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
