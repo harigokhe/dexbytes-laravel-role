@@ -1,57 +1,49 @@
 package folder structure
 
-	│ composer.json
-	|
-	│ readme.md
+	
+	│   composer.json
+	│   readme.md
 	│
-	├─config
-	|
-	│ roles.php
+	├───config
+	│       roles.php
 	│
-	├─migrations
-	│ 2016_01_15_105324_create_roles_table.php
-	│ 2016_01_15_114412_create_role_user_table.php
-	│ 2016_01_26_115212_create_permissions_table.php
-	│ 2016_01_26_115523_create_permission_role_table.php
-	│ 2016_02_09_132439_create_permission_user_table.php
+	├───migrations
+	│       2016_01_15_105324_create_roles_table.php
+	│       2016_01_15_114412_create_role_user_table.php
+	│       2016_01_26_115212_create_permissions_table.php
+	│       2016_01_26_115523_create_permission_role_table.php
+	│       2016_02_09_132439_create_permission_user_table.php
 	│
-	├─seeds
-	│ ConnectRelationshipsSeeder.php
-	│ PackageSeeder.php
-	│ PermissionsTableSeeder.php
-	│ RolesTableSeeder.php
-	│ UsersTableSeeder.php
+	├───seeds
+	│       ConnectRelationshipsSeeder.php
+	│       PermissionsTableSeeder.php
+	│       RolesTableSeeder.php
+	│       UsersTableSeeder.php
 	│
-	└─src
-		│ LaravelRoleServiceProvider.php
+	└───src
+		│   LaravelRoleServiceProvider.php
 		│
-		├─Exceptions
-		│ AccessDeniedException.php
-		│ LevelDeniedException.php
-		│ PermissionDeniedException.php
-		│ RoleDeniedException.php
+		├───Exceptions
+		│       AccessDeniedException.php
+		│       LevelDeniedException.php
+		│       PermissionDeniedException.php
+		│       RoleDeniedException.php
 		│
-		├─Interfaces
-		│ HasRoleAndPermission.php
-		│ PermissionHasRelations.php
-		│ RoleHasRelations.php
+		├───Interfaces
+		│       HasRoleAndPermission.php
+		│       PermissionHasRelations.php
+		│       RoleHasRelations.php
 		│
-		├─Models
-		│ Permission.php
-		│ Role.php
+		├───Models
+		│       Permission.php
+		│       Role.php
 		│
-		├─seeds
-		│ ConnectRelationshipsSeeder.php
-		│ PermissionsTableSeeder.php
-		│ RolesTableSeeder.php
-		│ UsersTableSeeder.php
-		│
-		├─Traits
-		│  HasRoleAndPermission.php
-		│  PermissionHasRelations.php
-	    │  RoleHasRelations.php
-		│  Slugable.php
-		│  
+		└───Traits
+				HasRoleAndPermission.php
+				PermissionHasRelations.php
+				RoleHasRelations.php
+				Slugable.php
+
  Package setup steps
  
 1)add "harigokhe/dexbytes-laravel-role": "dev-master", in  composer file
