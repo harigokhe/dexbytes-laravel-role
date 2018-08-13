@@ -91,7 +91,7 @@ php artisan db:seed
 
 	
 	
-/* Seed an initial set of Permissions, Roles, and Users with roles. */
+ Seed an initial set of Permissions, Roles, and Users with roles. 
  #### Roles Seeded
 |Property|Value|
 |----|----|
