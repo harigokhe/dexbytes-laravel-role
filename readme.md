@@ -46,36 +46,41 @@
 
  Package Installation
  
-1) add "harigokhe/dexbytes-laravel-role": "dev-master", in  composer file
+1) Add "harigokhe/dexbytes-laravel-role": "dev-master" in require json in composer file 
 
-2) composer update
+2) Update composer 
 
-3) add service provider in config/app.php in provider array 
+   composer update
+
+3) Add service provider in config/app.php in provider array 
 
    harigokhe\LaravelRoles\LaravelRoleServiceProvider::class
  
-4) publish your package file 
+4) Publish your package file 
 
    php artisan vendor:publish --provider="harigokhe\LaravelRoles\LaravelRoleServiceProvider"
 
 5) php artisan migrate
 
-6) add class in user model
+6) Add class in user model
 
-   before class-  use harigokhe\LaravelRoles\Traits\HasRoleAndPermission;
+   Before class-  use harigokhe\LaravelRoles\Traits\HasRoleAndPermission;
 
-   after class-	use HasRoleAndPermission;
+   After class-	use HasRoleAndPermission;
 
-7) open file database/seeds/DatabaseSeeder.php 
+7) Open file database/seeds/DatabaseSeeder.php 
 
-   add line inside run method
+   Add these line inside run method
 
    $this->call(PermissionsTableSeeder::class);
    $this->call(RolesTableSeeder::class);
    $this->call(UsersTableSeeder::class);
    $this->call(ConnectRelationshipsSeeder::class);
 
-8) Run command for admin/user role
+8) Run command 
+   composer dumpautoload
+
+9) Run command for admin/user role
 
    php artisan db:seed 
 	
