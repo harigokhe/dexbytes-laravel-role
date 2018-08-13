@@ -42,7 +42,7 @@ package folder structure
 				HasRoleAndPermission.php
 				PermissionHasRelations.php
 				RoleHasRelations.php
-				Slugable.php
+				Slugable.php 
 
  Package setup steps
  
