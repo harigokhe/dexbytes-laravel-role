@@ -46,12 +46,12 @@ package folder structure
 		│ RolesTableSeeder.php
 		│ UsersTableSeeder.php
 		│
-		└─Traits
-		  HasRoleAndPermission.php
-		  PermissionHasRelations.php
-	      RoleHasRelations.php
-		  Slugable.php
-		  
+		├─Traits
+		│  HasRoleAndPermission.php
+		│  PermissionHasRelations.php
+	    │  RoleHasRelations.php
+		│  Slugable.php
+		│  
  Package setup steps
  
 1)add "harigokhe/dexbytes-laravel-role": "dev-master", in  composer file
