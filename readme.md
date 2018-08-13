@@ -87,7 +87,7 @@ add line inside run method
 
 7)Run command for admin/user role
 
-php artisan db:seed
+php artisan db:seed 
 
 	
 	
