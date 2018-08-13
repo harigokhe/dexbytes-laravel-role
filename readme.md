@@ -42,7 +42,6 @@ package folder structure
 		│
 		├─seeds
 		│ ConnectRelationshipsSeeder.php
-		│ PackageSeeder.php
 		│ PermissionsTableSeeder.php
 		│ RolesTableSeeder.php
 		│ UsersTableSeeder.php
