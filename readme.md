@@ -1,4 +1,4 @@
-package folder structure
+  package folder structure
 
 	
 	│   composer.json
@@ -44,43 +44,40 @@ package folder structure
 				RoleHasRelations.php
 				Slugable.php 
 
- Package setup steps
+ Package Installation
  
-1)add "harigokhe/dexbytes-laravel-role": "dev-master", in  composer file
+1) add "harigokhe/dexbytes-laravel-role": "dev-master", in  composer file
 
 2) composer update
 
-3)add service provider in config/app.php in provider array 
+3) add service provider in config/app.php in provider array 
 
- harigokhe\LaravelRoles\LaravelRoleServiceProvider::class
+   harigokhe\LaravelRoles\LaravelRoleServiceProvider::class
  
-4)publish your package file 
+4) publish your package file 
 
-php artisan vendor:publish --provider="harigokhe\LaravelRoles\LaravelRoleServiceProvider"
+   php artisan vendor:publish --provider="harigokhe\LaravelRoles\LaravelRoleServiceProvider"
 
 5) php artisan migrate
 
-5)add class in user model
+6) add class in user model
 
-before class-  use harigokhe\LaravelRoles\Traits\HasRoleAndPermission;
+   before class-  use harigokhe\LaravelRoles\Traits\HasRoleAndPermission;
 
-after class-	use HasRoleAndPermission;
+   after class-	use HasRoleAndPermission;
 
+7) open file database/seeds/DatabaseSeeder.php 
 
-6) open file database/seeds/DatabaseSeeder.php 
+   add line inside run method
 
-add line inside run method
+   $this->call(PermissionsTableSeeder::class);
+   $this->call(RolesTableSeeder::class);
+   $this->call(UsersTableSeeder::class);
+   $this->call(ConnectRelationshipsSeeder::class);
 
-	$this->call(PermissionsTableSeeder::class);
-	$this->call(RolesTableSeeder::class);
-	$this->call(UsersTableSeeder::class);
-	$this->call(ConnectRelationshipsSeeder::class);
+8) Run command for admin/user role
 
-7)Run command for admin/user role
-
-php artisan db:seed 
-
-	
+   php artisan db:seed 
 	
  Seed an initial set of Permissions, Roles, and Users with roles. 
  #### Roles Seeded
